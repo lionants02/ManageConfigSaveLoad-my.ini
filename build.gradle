@@ -7,10 +7,17 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    google()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+    maven { url "https://dl.bintray.com/blazei/maven" }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.amshove.kluent:kluent:1.34"
 }
 
 compileKotlin {
