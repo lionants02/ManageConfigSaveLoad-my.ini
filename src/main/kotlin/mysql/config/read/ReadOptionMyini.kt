@@ -9,7 +9,7 @@ class ReadOptionMyini(val file: File) : ReadOption {
 
     private val configMachine = ConfigMachine()
 
-    override fun getConfig(): Map<GroupName, Operater> {
+    override fun read(): Map<GroupName, Operater> {
         val output = hashMapOf<GroupName, Operater>()
         val reader = Files.lines(file.toPath())
         var group = ""
