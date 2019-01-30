@@ -1,5 +1,7 @@
 package mysql.config.read
 
+import mysql.config.GroupName
+import mysql.config.Operater
 import java.io.File
 import java.nio.file.Files
 
@@ -47,3 +49,5 @@ class ReadOptionMyini(val file: File) : ReadOption {
         }
     }
 }
+
+internal typealias TempOperater = HashMap<String, String>
