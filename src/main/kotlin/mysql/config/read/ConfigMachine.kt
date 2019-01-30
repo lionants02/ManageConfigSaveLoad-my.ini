@@ -1,4 +1,4 @@
-package read.config.mysql
+package mysql.config.read
 
 internal class ConfigMachine {
     private val rexWord = Regex("""^\w.*""")

@@ -1,4 +1,4 @@
-package read.config.mysql
+package mysql.config.read
 
 import myIni
 import org.amshove.kluent.`should be equal to`

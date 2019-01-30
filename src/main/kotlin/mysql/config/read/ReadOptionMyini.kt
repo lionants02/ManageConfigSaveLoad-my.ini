@@ -1,4 +1,4 @@
-package read.config.mysql
+package mysql.config.read
 
 import java.io.File
 import java.nio.file.Files

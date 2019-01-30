@@ -1,4 +1,4 @@
-package read.config.mysql
+package mysql.config.read
 
 typealias GroupName = String
 typealias Operater = Map<String, String>
