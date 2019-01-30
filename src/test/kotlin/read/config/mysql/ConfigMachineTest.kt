@@ -4,10 +4,11 @@ import myIni
 import org.amshove.kluent.`should be`
 import org.junit.Ignore
 import org.junit.Test
+import java.nio.file.Files
 
-internal class ConfigMachineTest {
+class ConfigMachineTest {
 
-    val configMachine = ConfigMachine()
+    private val configMachine = ConfigMachine()
 
     @Test
     fun processComment() {
@@ -29,7 +30,7 @@ internal class ConfigMachineTest {
     @Ignore("Print my ini")
     fun process() {
 
-        myIni.forEach {
+        Files.lines(myIni.toPath()).forEach {
             val start = try {
                 it.substring(0, 5)
             } catch (ex: java.lang.StringIndexOutOfBoundsException) {
