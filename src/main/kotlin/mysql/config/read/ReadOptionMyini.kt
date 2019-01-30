@@ -32,6 +32,7 @@ class ReadOptionMyini(val file: File) : ReadOption {
                 }
             }
         }
+        reader.close()
         return output.toMap()
     }
 
