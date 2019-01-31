@@ -18,7 +18,6 @@ internal fun getOpt(str: String): Pair<String, String> {
         val mapOpt = Regex("""^(.*)=(.*)$""").matchEntire(str)!!.groupValues
         mapOpt[mapOpt.size - 2].trim() to mapOpt.last().trim()
     } catch (ex: kotlin.KotlinNullPointerException) {
-        println("first parameter $str")
         str to ""
     }
 }
