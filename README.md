@@ -1,6 +1,6 @@
 "# ManageConfigSaveLoad-my.ini" 
 
-[![Build Status](https://travis-ci.org/lionants02/ManageConfigSaveLoad-my.ini.svg?branch=master)](https://travis-ci.org/ffc-nectec/entities)
+[![Build Status](https://travis-ci.org/lionants02/ManageConfigSaveLoad-my.ini.svg?branch=master)](https://travis-ci.org/lionants02/ManageConfigSaveLoad-my.ini)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 
 
