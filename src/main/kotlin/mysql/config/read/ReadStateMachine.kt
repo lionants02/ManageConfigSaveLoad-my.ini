@@ -1,6 +1,6 @@
 package mysql.config.read
 
-internal class ConfigMachine {
+internal class ReadStateMachine {
     private val rexWord = Regex("""^\w.*""")
 
     fun process(firstChar: String): Stage {

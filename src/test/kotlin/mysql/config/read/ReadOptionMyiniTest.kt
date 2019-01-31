@@ -1,6 +1,8 @@
 package mysql.config.read
 
 import myIni
+import mysql.config.getGroup
+import mysql.config.getOpt
 import org.amshove.kluent.`should be equal to`
 import org.junit.Test
 
@@ -11,12 +13,12 @@ class ReadOptionMyiniTest {
     @Test
     fun `getGroup$MySqlReadConfig`() {
 
-        readOption.getGroup("[mysqldump]") `should be equal to` "mysqldump"
+        getGroup("[mysqldump]") `should be equal to` "mysqldump"
     }
 
     @Test
     fun `getOpt$MySqlReadConfig`() {
-        val opt = readOption.getOpt("max_allowed_packet = 16M")
+        val opt = getOpt("max_allowed_packet = 16M")
 
         opt.first `should be equal to` "max_allowed_packet"
         opt.second `should be equal to` "16M"
@@ -24,7 +26,7 @@ class ReadOptionMyiniTest {
 
     @Test
     fun getConfig() {
-        val config = readOption.getConfig()
+        val config = readOption.read()
 
         config["mysqld"]!!["log"]!! `should be equal to` "jlog.log"
         config["myisamchk"]!!["sort_buffer_size"]!! `should be equal to` "8M"

@@ -8,23 +8,23 @@ import java.nio.file.Files
 
 class ConfigMachineTest {
 
-    private val configMachine = ConfigMachine()
+    private val configMachine = ReadStateMachine()
 
     @Test
     fun processComment() {
-        configMachine.process("# xxddv") `should be` ConfigMachine.Stage.NextLine
-        configMachine.process("; xxddv") `should be` ConfigMachine.Stage.NextLine
+        configMachine.process("# xxddv") `should be` ReadStateMachine.Stage.NextLine
+        configMachine.process("; xxddv") `should be` ReadStateMachine.Stage.NextLine
     }
 
     @Test
     fun processgetGroup() {
-        configMachine.process("[mysqld]") `should be` ConfigMachine.Stage.GetGroup
+        configMachine.process("[mysqld]") `should be` ReadStateMachine.Stage.GetGroup
     }
 
     @Test
     fun processgetGetOpt() {
-        configMachine.process("default-character-set=utf8") `should be` ConfigMachine.Stage.GetOpt
-        configMachine.process("""datadir="C:/Program Files/MySQL/Data/"""") `should be` ConfigMachine.Stage.GetOpt
+        configMachine.process("default-character-set=utf8") `should be` ReadStateMachine.Stage.GetOpt
+        configMachine.process("""datadir="C:/Program Files/MySQL/Data/"""") `should be` ReadStateMachine.Stage.GetOpt
     }
 
     @Ignore("Print my ini")
