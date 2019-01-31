@@ -31,7 +31,7 @@ class WriteOptionMyiniTest {
         writeOption.writeMysqld("ggg" to "aaa")
 
         Files.lines(fileTest.toPath()).filter {
-            it == "ggg=aaa"
+            it == "ggg = aaa"
         }.toList().size `should be equal to` 1
     }
 }

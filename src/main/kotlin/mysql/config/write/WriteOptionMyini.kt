@@ -5,7 +5,7 @@ import java.io.FileWriter
 import java.nio.file.Files
 import java.util.LinkedList
 
-class WriteOptionMyini(val file: File) : WriteOption {
+class WriteOptionMyini(private val file: File) : WriteOption {
 
     override fun writeMysqld(wr: Pair<String, String>) {
         val write = LinkedList<String>()
@@ -14,7 +14,7 @@ class WriteOptionMyini(val file: File) : WriteOption {
         reader.forEach {
             write.add(it)
             if (it.startsWith("[mysqld]")) {
-                write.add(wr.first + "=" + wr.second)
+                write.add(wr.first + " = " + wr.second)
             }
         }
         reader.close()

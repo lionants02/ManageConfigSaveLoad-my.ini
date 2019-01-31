@@ -6,7 +6,7 @@ import mysql.config.getOpt
 import java.io.File
 import java.nio.file.Files
 
-class ReadOptionMyini(val file: File) : ReadOption {
+class ReadOptionMyini(private val file: File) : ReadOption {
 
     private val configMachine = ReadStateMachine()
 
