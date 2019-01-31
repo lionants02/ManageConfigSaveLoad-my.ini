@@ -1,7 +1,6 @@
 "# ManageConfigSaveLoad-my.ini" 
 
-[![Release](https://jitpack.io/v/lionants02/ManageConfigSaveLoad-my.ini.svg)]
-(https://jitpack.io/#lionants02/ManageConfigSaveLoad-my.ini)  
+[![Release](https://jitpack.io/v/lionants02/ManageConfigSaveLoad-my.ini.svg)](https://jitpack.io/#lionants02/ManageConfigSaveLoad-my.ini)  
 
 เพิ่ม JitPack repository ที่ build script
 ```
